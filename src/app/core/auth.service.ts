@@ -18,7 +18,7 @@ export class AuthService {
 
 
   userSignUp(user: SignupDetail): Observable<any>{
-     const signupUrl = `${this.url}/user`;gi
+     const signupUrl = `${this.url}/user`;
      return this.httpClient.post(signupUrl, user).pipe(
        map(res => res),
        catchError(this.handleError)
